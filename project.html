@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martha| Personal Portfolio</title>
+ <link rel="stylesheet" href="projectstyle.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                
+                <ul>
+                    <li><a href="#">Homepage</a></li>
+                    <li><a href="#about">About ME</a></li>
+                    <li><a href="#Skills" onclick="opentab('Skills')">Skills</a></li>
+                    <li><a href="#Education" onclick="opentab('Education')">Education</a></li>
+                    
+                    <li><a href="#Contact-section" onclick="opentab('Contact')">Contact</a></li>
+                    <li><a href="#Projects-section" onclick="opentab('Projects')">Projects</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <img src="picture2.jpeg" alt="Martha's headshot" class="profile-photo">
+                <div class="header-info">
+                    <h3>Hi,I'm <span>Martha</span> a computer science student.</h3>
+                
+                <p class="tagline">"Where Code solves Problems"</p>
+                <ul>
+                    <li><a href="#about" class="btn">Explore my Portfolio ></a> </li>
+                </ul>
+            
+
+                </div>
+               
+                
+            </div>
+            
+            
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                 <div class="about-col-2">
+                    <h1 class="sub-title"> About Me</h1>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('About Me')">About me</p>
+                         </div>
+                    <div class="tab-contents a"id="About Me">
+                        <p> I am a Computer Science student that has a strong interest in  programming and 
+                        enjoy solving problems through programming since i have a knowledge in programming languages such as Java and C++.I continually 
+                        strive to learn and improve my skils to become a professional developer in the future. </p>
+                     </div>
+                    
+                       <div class="tab-titles">
+    
+                        <p class="tab-links" onclick="opentab('Skills')">Skills</p>
+                     </div>
+ <div class="tab-contents " id="Skills">
+                        <ul style="margin-top: 0; padding-top: 0;">
+                                <li><span>Java Programming</span><br>Developing programs  and solving problems using java code</li>
+                                <li><span>C++ Programming</span><br>Basic knowledge of writing and understanding C++ programs</li>
+                            </ul>
+
+                    </div>
+                    <div class="tab-titles">
+                            <p class="tab-links " onclick="opentab('Education')">Education</p>
+                        
+                        </div>
+                        <div class="tab-contents "id="Education">
+                            <ul>
+                                <li><span>Bachelor of Science in Computer Science</span><br>(in progress)|University of Venda|2025-Present</li>
+                                <li><span>Grade12(Natinal Senior Certificate)</span> <br>Makgoka High School|2023</li>
+
+                            </ul>
+
+                        </div>
+ </div>
+                        
+                     </div>
+        </div>
+    </div>
+
+    <div id="Projects-section" >
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            
+            </div>
+            <div class="project-list">
+                <div class="tab-titles"> 
+                    <p class="tab-links"onclick="opentab('Project 1')">PROJECT No 1</p>    
+                </div>
+                <div class="tab-contents " id="Project 1">
+                    <h2>Student Management App</h2>
+                    
+                <p><strong>Description:</strong>This application was develepod for a certain college to manage student records,including capturing,searching,and deleting student data based on an Age validaton.Since the App had to have age restriction of equal or greater than 16.</p>
+                <p><strong>Toolsused:</strong>Vs code,Java, OOP principles(ENCAPSULATION and ABSTRSCTION),Array Lists.</p>
+              </div>
+              <div class="tab-titles">
+                <p class="tab-links"onclick="opentab('Project 2')">PROJECT No 2</p>
+              </div>
+
+              <div class="tab-contents" id="Project 2">
+                <h2>Account Balance Manager App</h2>
+                
+                <p><strong>Description</strong>This App was to manage money in a bank system by tracking the users balance and updating it when money is withdrawn or deposited.This was basically to see how i can manage users account balance by passing adresses to functions.</p>
+                <p><strong>Toolsused:</strong> c++,pointers,Control structures(IF/ELSE)and Functions.</p>
+
+              </div>
+            </div>
+
+            </div>
+         
+ <div id="Contact-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="about-col-2">
+                                <h1 class="sub-title">Contact</h1>
+                                <div class="tab-titles">
+                                    <p class="tab-links " onclick="opentab('Contact me here')">Contact me here</p>
+                                     </div>
+                                     <div class="tab-contents "id="Contact me here">
+                                        <ul>
+                                        <li><span style="color: white;">Email</span><a href="mailto:Matemamartha093@gmail.com"><i class="fa-solid fa-envelope"></i></a><br>Matemamartha093@gmail.com </li>
+                                        <li></li>
+                                        
+                                        <li style="margin-top: 20px;"><span style="color: white;">Github.com</span><a href="https://github.com/matemamartha093-source"><i class="fa-brands fa-github"></i></a><br>matemamartha093-source</li>
+                                        </ul>
+                                        
+
+                                     </div>
+                                     
+
+                                     </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                
+
+ <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+           for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+  }
+  function toggleContact(){
+    var info =document.getElementById("contact-Info");
+    if(Info.style.display ==="none" ){
+        info.style.display="block";
+    }else{
+        info.style.display="none";
+    }
+  }
+
+    
+
+        
+        
+    </script>
+</body>
+</html>
